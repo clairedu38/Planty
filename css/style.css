@@ -1,0 +1,188 @@
+/*
+ Theme Name:   Planty
+ Theme URI:    https://openclassrooms.com/
+ Description:  Thème PLanty basé sur le theme Blankslate
+ Author:       Admin
+ Author URI:   https://openclassrooms.com/
+ Template:     blankslate
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         boisson, plante
+ Text Domain:  planty
+*/
+
+/* General */
+* {
+    font-family: 'Syne', sans-serif;
+}
+
+:root {
+    --button-nav: #DC9F96;
+    --bg-color: #ECE2DA;
+    --green: #3B8E46;
+    --title-pink: #D2776A;
+    --button: #E0B9B4;
+    --button-hover: #C02E44;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.4em;
+    margin-top: 0px;
+    font-weight: 800;
+    color: var(--green);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.9em;
+    font-weight: 800;
+    margin: 0px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.9em;
+    font-weight: 700;
+    margin: 0px;
+    color: var(--green);
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0px;
+}
+
+
+
+/************** Header ********/
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    padding-left: 37px;
+}
+
+.logo-header img {
+    width: 201px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+  
+nav a {
+    margin-left: 60px;
+    text-decoration: none;
+    }
+
+nav a:hover {
+    font-weight: 700;
+}
+
+nav a:last-child {
+        display: flex;
+        background-color: var(--button-nav);
+        color: #fff; 
+        width: 236px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+    }
+
+nav a:last-child:hover {
+    background-color: var(--button-hover); 
+}
+
+    /* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    height: 60px;
+}
+
+.banniere-accueil{
+    background-color: var(--bg-color);
+    padding: 105px 310px 70px 310px;
+    text-align: center;
+    position: relative;
+}
+
+
+.CTA {
+    background-color: var(--button); /* Couleur de fond pour le bouton Commander */
+    color: #fff; /* Couleur du texte pour le bouton Commander */
+    padding: 0px 56px;
+    height: 55px;
+    border: none;
+    border-radius: 5px ;
+    font-size: 0.9em ;
+    margin-top: 7px;
+}
+
+.CTA:hover {
+   background-color:var(--button-hover); 
+}
+
+.separateur {
+    background-color: var(--bg-color); 
+    height: 20px;
+    border-bottom-left-radius: 500px; 
+    border-bottom-right-radius: 500px;
+}
+
+.full-width-image {
+    width: 100%;
+    display: block;
+    padding-top: 115px;
+}
+
+label {
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 13px;
+    margin-top: 22px;
+}
+
+input, textarea {
+    height: 71px;
+    border-radius: 7px;
+    border: none;
+  }

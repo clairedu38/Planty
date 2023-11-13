@@ -1,0 +1,102 @@
+/* Première section */
+
+.titre_rose {
+    color: var(--title-pink);
+    margin-top: 81px ;
+}
+
+.fleur {
+    height: 190px;
+    position: absolute;
+    top: 71px;
+    left: 143px;
+}
+
+/* Deuxième section */
+
+h3 {
+    padding-top: 76px;
+    padding-bottom: 50px;
+    color: black;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 20px 0px 11px 0px;
+}
+
+.equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 157px;
+    position: relative;
+}
+
+.column-equipe {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Afficher les colonnes */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.feuille2 {
+    height: 219px;
+    position: absolute;
+    bottom: 0px;
+    left: 1190px;
+}
+
+
+/* Troisième section - Formulaire */
+
+.section-formulaire-contact {
+    display: flex;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.formulaire-contact {
+    display: flex;
+    width: 383px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: auto;
+}
+
+.section-formulaire-contact .full-width-image {
+    padding-top: 42px;
+}
+
+.CTA {
+    margin: 0;
+    margin-top: 24px;
+    padding: 0 73px;
+
+}
+
+
+textarea {
+    height: 237px;
+}
+
+.feuillebaie {
+    height: 190px;
+    position: absolute;
+    top: 562px;
+    left: 442px;
+    z-index: 0;
+}

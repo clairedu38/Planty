@@ -1,0 +1,104 @@
+
+/* Section banniere accueil */
+
+.banniere-accueil img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+
+.separator-rounded {
+    background-color: var(--bg-color); 
+    height: 20px;
+    border-radius: 0 0 30% 30%;
+    border-bottom: 8px solid #e3d9d0;
+    box-shadow:0 10px red;
+}
+
+/* Section Description planty */
+
+.description-planty {
+    max-width: 497px; 
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 75px 0px 82px 0px ;
+}
+
+.description-planty p {
+    margin-top: 47px ;
+}
+
+/* Section Gouts */
+.gouts {
+    background-color: var(--bg-color); 
+    text-align: center;
+    padding: 58px 0px 20px 0px;
+    align-items: center;
+}
+
+.gouts h2 {
+    color:var(--title-pink); 
+}
+
+.gouts p {
+    margin: 7px 0px 48px 0px;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.image-box {
+    width: 393px;
+    text-align: center;  
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Section avis */
+
+.section_avis h2 {
+color: var(--green);
+margin: 105px 0px 84px 0px;
+}
+
+.avis {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+}
+
+.avis_unique {
+    display: flex;
+    align-items: flex-start;
+    width: 345px;
+    gap: 20px;
+
+}
+
+.avis_image img{
+    width: 139px;
+}
+
+.avis_personne {
+    text-align: left;
+    padding-top: 18px;
+}
+
+.avis_personne p {
+    font-size: 1em;
+    padding-top: 11px;
+}
+
+
+

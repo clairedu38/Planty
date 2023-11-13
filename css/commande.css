@@ -1,0 +1,152 @@
+/* Style pour l'arrière-plan vert */
+.commande-fond {
+    display: flex;
+    justify-content: center;
+    background-color: var(--green);
+}
+
+.commande {
+    width: 860px;
+}
+
+.commande h1 {
+    padding: 69px 0px;
+    margin: 0;
+    color: white;
+
+}
+
+.white-hr {
+    border-top: 1px solid white;
+    margin: 0;
+}
+
+.commande-title {
+    text-align: left;
+    color: white;
+    padding: 40px 0px;
+}
+
+.command-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 93px;
+    margin-top: 53px;
+}
+
+.command-form h3 {
+    text-align: left;
+    color: white;
+}
+
+.image-gout {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.image-gout img {
+    height: auto;
+    width: 193px;
+}
+
+.produit-unique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantity {
+    width: 39px;
+    height: 56px;
+    border-radius: 0;
+    margin-top: 16px;
+}
+
+
+/* Style pour les colonnes du formulaire
+
+.compteur-produit {
+    display: flex;
+    flex-direction: row;
+    gap: 11px ;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.compteur {
+    display: flex;
+    flex-direction: row;
+}
+
+.compteur-bouton {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 31px;
+    border-radius: 0 7px 7px 0;
+    background-color: var(--button-nav);
+}
+
+.bouton-plus , .bouton-moins {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+}
+
+.bouton-plus {
+    border-bottom: 1px solid white;
+}
+
+
+.bouton-ok {
+    background-color: var(--button) ; 
+    color: white;
+    width: 100px;
+    height: 56px;
+    border: none;
+    border-radius: 5px ;
+    font-size: 0.9em ;
+}
+
+.bouton-ok:hover {
+    background-color: var(--button-hover); 
+}
+
+
+*/
+
+
+
+
+/* Style pour les colonnes du formulaire */
+.colonne{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 44px;
+    width: 100%;
+}
+
+.column1 , .column2 {
+    display: flex;
+    text-align: left;
+    color: white;
+    flex-direction: column;
+}
+
+.column1 {
+    padding-right: 45px;
+    border-right: 1px solid white;
+}
+
+.column2 {
+    padding-left: 45px;
+}
+
+.CTA {
+    background-color: var(--button) ; 
+}
