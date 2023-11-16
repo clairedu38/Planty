@@ -1,3 +1,6 @@
+<?php
+// Template Name: Nous rencontrer
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,28 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/apropos.css">
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/nous-rencontrer.css">
 </head>
 
-<body>
-    <div class="main-container">
-        <header>
-            <div class="logo-header">
-                <a href="accueil.html"><img src="images/logo.svg" alt="Logo Planty"></a>
-            </div>
-            <nav>
-                <a href="a-propos.html" class="lien-menu">Nous rencontrer</a>
-                <a href="#admin" class="lien-menu">Admin</a>
-                <a href="commande.html" class="lien-menu-rose">Commander</a>
-            </nav>
-        </header>
-
-        <main>
+<?php
+get_header();
+?>
+<main>
             <section class="banniere-accueil">
                 <h1 class="titre_rose">Nous rencontrer</h1>
                 <p>Chez Planty nous sommes tous passionnés par le bien-être, et ça se retrouve dans nos boissons ! Notre start-up s’est construite au fur et à mesure de rencontres entre amoureux des plantes.</p> 
-                <img src="images/fleur.svg" alt="fleur" class="fleur">
+                <img src="<?= get_stylesheet_directory_uri(); ?>/images/fleur.png" alt="fleur" class="fleur">
             </section>
         
             <div class="separateur"></div>
@@ -38,26 +31,26 @@
                 <h3>L'équipe</h3>
                 <div class="equipe">
                     <div class="column-equipe">
-                        <img src="images/Megane.png" alt="femme">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/Megane.png" alt="femme">
                         <h4>Mégane</h4>
                         <p>CEO</p>
                     </div>
                     <div class="column-equipe">
-                        <img src="images/Brooke.png" alt="homme">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/Brooke.png" alt="homme">
                         <h4>Brooke</h4>
                         <p>Nutritionniste</p>
                     </div>
                     <div class="column-equipe">
-                        <img src="images/Sylvie.png" alt="femme souriante">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/Sylvie.png" alt="femme souriante">
                         <h4>Sylvie</h4>
                         <p>Mixologue</p>
                     </div>
-                <img src="images/Feuille 2.png" alt="feuille2" class="feuille2">
+                <img src="<?= get_stylesheet_directory_uri(); ?>/images/Feuille 2.png" alt="feuille2" class="feuille2">
                 </div>
             </section>
         
             <section class="section-formulaire-contact">
-                <img src="images/feuille baie.svg" alt="feuille et baies" class="feuillebaie">
+                <img src="<?= get_stylesheet_directory_uri(); ?>/images/feuille baie.png" alt="feuille et baies" class="feuillebaie">
                 <h3>Nous contacter</h3>
                 <form action="votre_script.php" method="post">
                     <div class="formulaire-contact">
@@ -72,15 +65,9 @@
                     </div>
                     <input class="CTA" type="submit" value="Envoyer">
                 </form>
-                <img src="images/canettes_bas_de_page.svg" alt="canettes planty" class="full-width-image">
-                <img src="images/feuille baie.svg" alt="feuille et baies" class="feuillebaie">
+                <img src="<?= get_stylesheet_directory_uri(); ?>/images/canettes_bas_de_page.svg" alt="canettes planty" class="full-width-image">
+                <img src="<?= get_stylesheet_directory_uri(); ?>/images/feuille baie.png" alt="feuille et baies" class="feuillebaie">
             </section>
-        </main>
 
-        <footer>
-            <a href="#">Mentions légales</li>
-        </footer>
-    </div>
-</body>
-
-</html>
+<?php
+    get_footer();

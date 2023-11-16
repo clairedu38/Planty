@@ -49,12 +49,7 @@
     margin-bottom: 40px;
 }
 
-.image-gout img {
-    height: auto;
-    width: 193px;
-}
-
-.produit-unique {
+.quantite-produit {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,61 +60,39 @@
     height: 56px;
     border-radius: 0;
     margin-top: 16px;
+    text-align: center;
+    font-size: 1em;
 }
 
-
-/* Style pour les colonnes du formulaire
-
-.compteur-produit {
-    display: flex;
-    flex-direction: row;
-    gap: 11px ;
-    align-items: center;
-    margin-top: 14px;
+.image-fruit {
+    width: 193px;
+    height: 129px;
+    text-align: center; 
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.compteur {
-    display: flex;
-    flex-direction: row;
+.image-fruit img {
+    width: 100%;
+    height: auto;
+    position:absolute;
+    z-index:0;
 }
 
-.compteur-bouton {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 31px;
-    border-radius: 0 7px 7px 0;
-    background-color: var(--button-nav);
-}
-
-.bouton-plus , .bouton-moins {
+.fruit-petit {
+    position: relative;
+    line-height:1;
+    text-align:center;
+    word-break: break-all;
+    padding:0;
+    font-weight: 800;
+    font-size: 1.3em;
     color: white;
-    background: none;
-    border: none;
-    font-size: 1.2em;
-}
-
-.bouton-plus {
-    border-bottom: 1px solid white;
-}
-
-
-.bouton-ok {
-    background-color: var(--button) ; 
-    color: white;
-    width: 100px;
-    height: 56px;
-    border: none;
-    border-radius: 5px ;
-    font-size: 0.9em ;
-}
-
-.bouton-ok:hover {
-    background-color: var(--button-hover); 
-}
-
-
-*/
-
+    text-transform: uppercase;
+    z-index: 1;
+  }
 
 
 

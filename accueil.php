@@ -1,3 +1,7 @@
+<?php
+// Template Name: Accueil 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,66 +12,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/accueil.css">
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/accueil.css">
 </head>
 
-<body>
-    <div class="main-container">
-        <header>
-            <div class="logo-header">
-                <a href="accueil.html"><img src="images/logo.svg" alt="Logo Planty"></a>
-            </div>
-            <nav>
-                <a href="a-propos.html" class="lien-menu">Nous rencontrer</a>
-                <a href="#admin" class="lien-menu">Admin</a>
-                <a href="commande.html" class="lien-menu-rose">Commander</a>
-            </nav>
-        </header>
-
-        <main>
+<?php
+get_header();
+$imageaccueil = get_field('image_de_la_banniere');
+?>
+       <main>
             <section class="banniere-accueil">
-                <h1 class="text-center">Boisson énergisante<br>100% naturelle</h1>
-                <img src="images/Canette feuilles.png" alt="canette planty avec feuille en fond">   
+                <h1 class="text-center"><?php the_field('titre_banniere_accueil'); ?></h1>
+                <img src="<?php echo $imageaccueil['url']; ?>" alt="<?php echo $imageaccueil['alt']; ?>">   
             </section>
         
             <div class="separator-rounded"></div>
 
             <section class="description-planty">
-                <h3>L'énergie des plantes</h3>
-                <p> Planty, c’est la première boisson énergisante composée à 100 % de produits naturels. Avec son goût frais et fruité, retrouvez votre énergie grâce aux plantes riches en vitamine B2, à n’importe quel moment de la journée.</p>
+                <h3><?php the_field('titre_presentation_planty'); ?></h3>
+                <p> <?php the_field('paragraphe_presentation_planty'); ?></p>
             </section>
-        
+
+<?php
+$produits = get_field('galerie_produit');
+?>
+
             <section class="gouts">
-                <h2>Les goûts</h2>
-                <p>Nous avons une saveur pour chaque moment de votre journée</p>
+                <h2><?php the_field('titre_partie_produits'); ?></h2>
+                <p><?php the_field('sous-titre_partie_produits'); ?></p>
                 <div class="image-grid">
                     <div class="image-box">
-                        <img src="images/fraise.png" alt="fraises">
+                        <img src="<?php echo esc_url($produits['image_1']['url']); ?>" alt="fraises">
+                        <div class="fruit">FRAISE</div>
                     </div>
                     <div class="image-box">
-                        <img src="images/pamplemousse.png" alt="pamplemousse">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/pamplemousse.png" alt="pamplemousse">
+                        <div class="fruit">PAMPLE<br>MOUSSE</div>
                     </div>
                 </div>
                 <div class="image-grid">
                     <div class="image-box">
-                        <img src="images/framboise.png" alt="framboises">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/framboise.png" alt="framboises">
+                        <div class="fruit">FRAM<br>BOISE</div>
                     </div>
                     <div class="image-box">
-                        <img src="images/citron.png" alt="citrons">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/citron.png" alt="citrons">
+                        <div class="fruit">CITRON</div>
                     </div>
                 </div>
-                <button class="CTA">Commander</button>
+                <a href="nom_du_bouton"><button class="CTA"><?php the_field('nom_du_bouton'); ?></button></a>
             </section>
         
             <div class="separateur"></div>
 
             <section class="section_avis">
-                <h2>Ce qu'ils en pensent</h2>
+                <h2><?php the_field('titre_de_la_partie_avis'); ?></h2>
                 <div class="avis">
                     <div class="avis_unique">
                         <div class="avis_image">
-                            <img src="images/fatiha.png" alt="Jeune femme souriante">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/fatiha.png" alt="Jeune femme souriante">
                         </div>
                         <div class="avis_personne">
                             <h3>Fatiha</h3>
@@ -76,7 +79,7 @@
                     </div>
                     <div class="avis_unique">
                         <div class="avis_image">
-                            <img src="images/vero.png" alt="Jeune femme avec enfant">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/vero.png" alt="Jeune femme avec enfant">
                         </div>
                         <div class="avis_personne">
                             <h3>Véro</h3>
@@ -85,7 +88,7 @@
                     </div>
                     <div class="avis_unique">
                         <div class="avis_image">
-                            <img src="images/marc.png" alt="Jeune  homme souriant">
+                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/marc.png" alt="Jeune homme souriant">
                         </div>
                         <div class="avis_personne">
                             <h3>Marc</h3>
@@ -94,15 +97,7 @@
                     </div>
                 </div>
             </section>
-            <img src="images/canettes_bas_de_page.svg" alt="canettes planty" class="full-width-image">
+            <img src="<?= get_stylesheet_directory_uri(); ?>/images/canettes_bas_de_page.svg" alt="canettes planty" class="full-width-image">
         
-        </main>
-
-
-        <footer>
-            <a href="#">Mentions légales</li>
-        </footer>
-    </div>
-</body>
-
-</html>
+<?php
+    get_footer();

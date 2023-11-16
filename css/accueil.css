@@ -11,9 +11,8 @@
 .separator-rounded {
     background-color: var(--bg-color); 
     height: 20px;
-    border-radius: 0 0 30% 30%;
-    border-bottom: 8px solid #e3d9d0;
-    box-shadow:0 10px red;
+    border-radius: 0 0 40% 40%;
+    box-shadow:0 10px #e3d9d0;
 }
 
 /* Section Description planty */
@@ -55,14 +54,32 @@
 
 .image-box {
     width: 393px;
-    text-align: center;  
+    height: 262px;
+    text-align: center; 
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .image-box img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    position:absolute;
+    z-index:0;
 }
 
+.fruit {
+    position: relative;
+    line-height:1;
+    text-align:center;
+    word-break: break-all;
+    padding:0 20px;
+    font-weight: 800;
+    font-size: 2.9em;
+    color: white;
+    z-index: 1;
+  }
 
 /* Section avis */
 

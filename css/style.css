@@ -1,16 +1,4 @@
-/*
- Theme Name:   Planty
- Theme URI:    https://openclassrooms.com/
- Description:  Thème PLanty basé sur le theme Blankslate
- Author:       Admin
- Author URI:   https://openclassrooms.com/
- Template:     blankslate
- Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         boisson, plante
- Text Domain:  planty
-*/
+
 
 /* General */
 * {
@@ -74,7 +62,9 @@ p {
     margin: 0px;
 }
 
-
+ul {
+    margin: 0;
+}
 
 /************** Header ********/
 
@@ -96,36 +86,46 @@ header {
     width: 201px;
 }
 
-nav {
+.header-menu {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     height: 80px;
-  }
+    margin: 0;
+    padding: 0;
+}
   
-nav a {
+.header-menu a {
     margin-left: 60px;
     text-decoration: none;
+    text-align: center;
     }
 
-nav a:hover {
+.header-menu a:hover {
+    font-weight: 700;
+    font-size: 0.8125em;
+}
+
+.header-menu li {
+    list-style-type: none;
+    margin-left: 20px; /* Ajustez la marge en fonction de votre mise en page */
+}
+
+.header-menu li:last-child a {
+    display: flex;
+    background-color: var(--button-nav);
+    color: #fff;
+    width: 236px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
 }
 
-nav a:last-child {
-        display: flex;
-        background-color: var(--button-nav);
-        color: #fff; 
-        width: 236px;
-        height: 80px;
-        justify-content: center;
-        align-items: center;
-        font-weight: 700;
-    }
-
-nav a:last-child:hover {
-    background-color: var(--button-hover); 
+.header-menu li:last-child a:hover {
+    background-color: var(--button-hover);
+    font-size: 1em; !important
 }
 
     /* Footer */
@@ -135,6 +135,14 @@ footer {
     align-items: center;
     font-size: 1em;
     height: 60px;
+}
+
+.footer-menu {
+    padding: 0;
+}
+
+.footer-menu li {
+    list-style-type: none;
 }
 
 .banniere-accueil{
@@ -163,8 +171,7 @@ footer {
 .separateur {
     background-color: var(--bg-color); 
     height: 20px;
-    border-bottom-left-radius: 500px; 
-    border-bottom-right-radius: 500px;
+    border-radius: 0 0 40% 40%;
 }
 
 .full-width-image {

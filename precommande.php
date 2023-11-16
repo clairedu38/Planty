@@ -1,3 +1,6 @@
+<?php
+// Template Name: Pre-commande
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,22 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/commande.css">
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/commande.css">
 </head>
 
-<body>
-    <div class="main-container">
-        <header>
-            <div class="logo-header">
-                <a href="accueil.html"><img src="images/logo.svg" alt="Logo Planty"></a>
-            </div>
-            <nav>
-                <a href="a-propos.html" class="lien-menu">Nous rencontrer</a>
-                <a href="#admin" class="lien-menu">Admin</a>
-                <a href="commande.html" class="lien-menu-rose">Commander</a>
-            </nav>
-        </header>
+<?php
+get_header();
+?>
 
         <main class="commande-fond">
             <form class="commande">
@@ -31,21 +25,33 @@
                 <hr class="white-hr">
                 <h3 class="commande-title">Votre commande</h3>
                 <div class="image-gout">
-                    <div class="produit-unique">
-                        <img src="images/fraise.png" alt="fraise">
-                        <input class="quantity" type="quantity">
+                    <div class="quantite-produit">
+                        <div class="image-fruit">
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/fraise.png" alt="fraise">
+                            <div class="fruit-petit">FRAISE</div>
+                        </div>
+                        <input class="quantity" type="quantity" value="0">
                     </div>
-                    <div class="produit-unique">
-                        <img src="images/pamplemousse.png" alt="pamplemousse">
-                        <input class="quantity" type="quantity">
+                    <div class="quantite-produit">
+                        <div class="image-fruit">
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/pamplemousse.png" alt="pamplemousse">
+                            <div class="fruit-petit">PAMPLE<br>MOUSSE</div>
+                        </div>
+                        <input class="quantity" type="quantity" value="0">
                     </div>
-                    <div class="produit-unique">
-                        <img src="images/framboise.png" alt="framboise">
-                        <input class="quantity" type="quantity">
+                    <div class="quantite-produit">
+                        <div class="image-fruit">
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/framboise.png" alt="framboise">
+                            <div class="fruit-petit">FRAM<br>BOISE</div>
+                        </div>
+                        <input class="quantity" type="quantity" value="0">
                     </div>
-                    <div class="produit-unique">
-                        <img src="images/citron.png" alt="citron">
-                        <input class="quantity" type="quantity">
+                    <div class="quantite-produit">
+                        <div class="image-fruit">
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/citron.png" alt="citron">
+                            <div class="fruit-petit">citron</div>
+                        </div>
+                        <input class="quantity" type="quantity" value="0">
                     </div>
                 </div>
                 <hr class="white-hr">
@@ -73,12 +79,6 @@
                     <input type="submit" value="Commander" class="CTA">
                 </div>
             </form>    
-        </main>
 
-        <footer>
-            <a href="#">Mentions légales</li>
-        </footer>
-    </div>
-</body>
-
-</html>
+            <?php
+    get_footer();
