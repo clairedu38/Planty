@@ -151,6 +151,10 @@ margin: 105px 0px 84px 0px;
         align-items: center;
     }
 
+    .avis_image img {
+        padding-left: 20px;
+    }
+
     .gouts p {
         margin: 7px 0px 20px 0px;
     }
@@ -165,6 +169,10 @@ margin: 105px 0px 84px 0px;
 
     .image-box img {
         width: 80%;
+    }
+
+    .fruit {
+        font-size: 2em;
     }
 
 }

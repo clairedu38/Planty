@@ -146,3 +146,36 @@ form {
     background-color: var(--button) ; 
     margin: auto;
 }
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 900px) {
+
+    .commande {
+        width: 100%;
+    }
+
+    .image-gout {
+        flex-direction: column;
+    }
+
+    .commande-title {
+        text-align: center;
+    }
+
+    .colonne {
+        grid-template-columns: 1fr;
+    }
+    
+    .column1 {
+        padding: 0 30px;
+        border-right: 0px solid white;
+    }
+    
+    .column2 {
+        padding: 20px 30px 0 30px;
+    }
+}

@@ -134,10 +134,19 @@ span.wpcf7-form-control-wrap {
 @media (max-width: 900px) {
 
     .equipe {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 157px;
-        position: relative;
+        flex-direction: column;
     }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    form {
+        width: 280px;
+    }
+
+    .forms {
+        width: 280px;
+    }
+
 }
