@@ -19,6 +19,12 @@
 <?php
 get_header();
 $imageaccueil = get_field('image_de_la_banniere');
+$imagecanettes = get_field('image_de_bas_de_page');
+$produits = get_field('galerie_produit');
+$CTAcommander = get_field('bouton_cta');
+$avis1 = get_field('avis_1');
+$avis2 = get_field('avis_2');
+$avis3 = get_field('avis_3');
 ?>
        <main>
             <section class="banniere-accueil">
@@ -33,34 +39,42 @@ $imageaccueil = get_field('image_de_la_banniere');
                 <p> <?php the_field('paragraphe_presentation_planty'); ?></p>
             </section>
 
-<?php
-$produits = get_field('galerie_produit');
-?>
-
             <section class="gouts">
                 <h2><?php the_field('titre_partie_produits'); ?></h2>
                 <p><?php the_field('sous-titre_partie_produits'); ?></p>
                 <div class="image-grid">
                     <div class="image-box">
-                        <img src="<?php echo esc_url($produits['image_1']['url']); ?>" alt="fraises">
-                        <div class="fruit">FRAISE</div>
+                            <img src="<?php echo esc_url( $produits['image_1']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_1']['alt'] ); ?>">
+                            <div class="fruit">
+                                <?php echo esc_html( $produits['nom_du_produit1'] );?> 
+                                <br> <?php  if($produits['nom_1_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit1b']);} ; ?>
+                            </div>
                     </div>
                     <div class="image-box">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/pamplemousse.png" alt="pamplemousse">
-                        <div class="fruit">PAMPLE<br>MOUSSE</div>
+                        <img src="<?php echo esc_url( $produits['image_2']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_2']['alt'] ); ?>">
+                        <div class="fruit">
+                            <?php echo esc_html( $produits['nom_du_produit2'] );?> 
+                            <br> <?php  if($produits['nom_2_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit2b']);} ; ?>
+                        </div>
                     </div>
                 </div>
                 <div class="image-grid">
                     <div class="image-box">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/framboise.png" alt="framboises">
-                        <div class="fruit">FRAM<br>BOISE</div>
+                        <img src="<?php echo esc_url( $produits['image_3']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_3']['alt'] ); ?>">
+                        <div class="fruit">
+                                <?php echo esc_html( $produits['nom_du_produit3'] );?> 
+                                <br> <?php  if($produits['nom_3_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit3b']);} ; ?>
+                        </div>
                     </div>
                     <div class="image-box">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/citron.png" alt="citrons">
-                        <div class="fruit">CITRON</div>
+                        <img src="<?php echo esc_url( $produits['image_4']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_4']['alt'] ); ?>">
+                        <div class="fruit">
+                                <?php echo esc_html( $produits['nom_du_produit4'] );?> 
+                                <br> <?php  if($produits['nom_4_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit4b']);} ; ?>
+                        </div>
                     </div>
                 </div>
-                <a href="nom_du_bouton"><button class="CTA"><?php the_field('nom_du_bouton'); ?></button></a>
+                <a href="<?php echo esc_url( $CTAcommander['url_bouton_cta'] ); ?>"><button class="CTA"><?php echo esc_html( $CTAcommander['nom_du_bouton'] ); ?></button></a>
             </section>
         
             <div class="separateur"></div>
@@ -70,34 +84,33 @@ $produits = get_field('galerie_produit');
                 <div class="avis">
                     <div class="avis_unique">
                         <div class="avis_image">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/fatiha.png" alt="Jeune femme souriante">
+                        <img src="<?php echo esc_url( $avis1['image']['url'] ); ?>" alt="<?php echo esc_attr( $avis1['image']['alt'] ); ?>">
                         </div>
                         <div class="avis_personne">
-                            <h3>Fatiha</h3>
-                            <p>La meilleure boisson énergisante disponible sur le marché !</p>
+                            <h3><?php echo esc_html( $avis1['prenom'] ); ?></h3>
+                            <p><?php echo esc_html( $avis1['avis'] ); ?></p>
                         </div>
                     </div>
                     <div class="avis_unique">
                         <div class="avis_image">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/vero.png" alt="Jeune femme avec enfant">
+                        <img src="<?php echo esc_url( $avis2['image']['url'] ); ?>" alt="<?php echo esc_attr( $avis2['image']['alt'] ); ?>">
                         </div>
                         <div class="avis_personne">
-                            <h3>Véro</h3>
-                            <p>blablabla</p>
+                            <h3><?php echo esc_html( $avis2['prenom'] ); ?></h3>
+                            <p><?php echo esc_html( $avis2['avis'] ); ?></p>
                         </div>
                     </div>
                     <div class="avis_unique">
                         <div class="avis_image">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/marc.png" alt="Jeune homme souriant">
+                        <img src="<?php echo esc_url( $avis3['image']['url'] ); ?>" alt="<?php echo esc_attr( $avis3['image']['alt'] ); ?>">
                         </div>
                         <div class="avis_personne">
-                            <h3>Marc</h3>
-                            <p>blablabla</p>
+                            <h3><?php echo esc_html( $avis3['prenom'] ); ?></h3>
+                            <p><?php echo esc_html( $avis3['avis'] ); ?></p>
                         </div>
                     </div>
                 </div>
             </section>
-            <img src="<?= get_stylesheet_directory_uri(); ?>/images/canettes_bas_de_page.svg" alt="canettes planty" class="full-width-image">
-        
+            <img src="<?php echo $imagecanettes['url']; ?>" alt="<?php echo $imagecanettes['alt']; ?>" class="full-width-image">
 <?php
     get_footer();

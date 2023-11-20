@@ -79,6 +79,7 @@
     font-size: 2.9em;
     color: white;
     z-index: 1;
+    text-transform: uppercase;
   }
 
 /* Section avis */
@@ -117,5 +118,53 @@ margin: 105px 0px 84px 0px;
     padding-top: 11px;
 }
 
+@media (max-width: 1200px) {
 
+    .section_avis {
+        padding: 0 30px;
+    }
 
+    .description-planty p {
+        margin-top: 25px ;
+    }
+
+    .description-planty {
+        padding: 45px 0px 45px 0px ;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .banniere-accueil img {
+        width: 80%;
+    }
+
+    .section_avis h2 {
+        margin: 50px 0px 40px 0px;
+    }
+
+    .avis {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .gouts p {
+        margin: 7px 0px 20px 0px;
+    }
+
+    .image-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+        gap: 0px;
+    }
+
+    .image-box img {
+        width: 80%;
+    }
+
+}

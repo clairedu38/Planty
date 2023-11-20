@@ -17,57 +17,51 @@
 
 <?php
 get_header();
+$imagefleur = get_field('image_de_fond');
+$imagecanettes = get_field('image_de_bas_de_page');
+$imagefeuillesbaies = get_field('image_decoration');
+$imagefeuille = get_field('image_decoration_equipe');
+$membre1 = get_field('membreequipe1');
+$membre2 = get_field('membreequipe2');
+$membre3 = get_field('membreequipe3');
 ?>
 <main>
             <section class="banniere-accueil">
-                <h1 class="titre_rose">Nous rencontrer</h1>
-                <p>Chez Planty nous sommes tous passionnés par le bien-être, et ça se retrouve dans nos boissons ! Notre start-up s’est construite au fur et à mesure de rencontres entre amoureux des plantes.</p> 
-                <img src="<?= get_stylesheet_directory_uri(); ?>/images/fleur.png" alt="fleur" class="fleur">
+                <h1 class="titre_rose"><?php the_field('titre_principal_apropos'); ?></h1>
+                <p><?php the_field('paragraphe'); ?></p> 
+                <img src="<?php echo $imagefleur['url']; ?>" alt="<?php echo $imagefleur['alt']; ?>" class="fleur">
             </section>
         
             <div class="separateur"></div>
 
             <section>
-                <h3>L'équipe</h3>
+                <h3><?php the_field('titre_equipe'); ?></h3>
                 <div class="equipe">
                     <div class="column-equipe">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/Megane.png" alt="femme">
-                        <h4>Mégane</h4>
-                        <p>CEO</p>
+                        <img src="<?php echo esc_url( $membre1['image']['url'] ); ?>" alt="<?php echo esc_attr( $membre1['image']['alt'] ); ?>">
+                        <h4><?php echo esc_html( $membre1['prenom'] ); ?></h4>
+                        <p><?php echo esc_html( $membre1['fonction'] ); ?></p>
                     </div>
                     <div class="column-equipe">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/images/Brooke.png" alt="homme">
-                        <h4>Brooke</h4>
-                        <p>Nutritionniste</p>
+                        <img src="<?php echo esc_url( $membre2['image']['url'] ); ?>" alt="<?php echo esc_attr( $membre2['image']['alt'] ); ?>">
+                        <h4><?php echo esc_html( $membre2['prenom'] ); ?></h4>
+                        <p><?php echo esc_html( $membre2['fonction'] ); ?></p>
                     </div>
                     <div class="column-equipe">
                         <img src="<?= get_stylesheet_directory_uri(); ?>/images/Sylvie.png" alt="femme souriante">
-                        <h4>Sylvie</h4>
-                        <p>Mixologue</p>
+                        <h4><?php echo esc_html( $membre3['prenom'] ); ?></h4>
+                        <p><?php echo esc_html( $membre3['fonction'] ); ?></p>
                     </div>
-                <img src="<?= get_stylesheet_directory_uri(); ?>/images/Feuille 2.png" alt="feuille2" class="feuille2">
+                <img src="<?php echo $imagefeuille['url']; ?>" alt="<?php echo $imagefeuille['alt']; ?>" class="feuille2">
                 </div>
             </section>
         
             <section class="section-formulaire-contact">
-                <img src="<?= get_stylesheet_directory_uri(); ?>/images/feuille baie.png" alt="feuille et baies" class="feuillebaie">
-                <h3>Nous contacter</h3>
-                <form action="votre_script.php" method="post">
-                    <div class="formulaire-contact">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom" required>
-            
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-            
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <input class="CTA" type="submit" value="Envoyer">
-                </form>
-                <img src="<?= get_stylesheet_directory_uri(); ?>/images/canettes_bas_de_page.svg" alt="canettes planty" class="full-width-image">
-                <img src="<?= get_stylesheet_directory_uri(); ?>/images/feuille baie.png" alt="feuille et baies" class="feuillebaie">
-            </section>
+                <img src="<?php echo $imagefeuillesbaies['url']; ?>" alt="<?php echo $imagefeuillesbaies['alt']; ?>" class="feuillebaie">
+                <h3><?php the_field('titre_contact'); ?></h3>
+                <?php echo do_shortcode( '[contact-form-7 id="9e5a911" title="Nous contacter"]' ); ?>
+                <img src="<?php echo $imagecanettes['url']; ?>" alt="<?php echo $imagecanettes['alt']; ?>" class="full-width-image">
+            </section> 
 
 <?php
     get_footer();

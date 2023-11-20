@@ -17,68 +17,61 @@
 
 <?php
 get_header();
+$produits = get_field('galerie_produit');
 ?>
 
         <main class="commande-fond">
-            <form class="commande">
-                <h1>Commander</h1>
+            <div class="commande">
+                <h1><?php the_field('titre_principal'); ?></h1>
                 <hr class="white-hr">
-                <h3 class="commande-title">Votre commande</h3>
+                <h3 class="commande-title"><?php the_field('sous_titre'); ?></h3>
                 <div class="image-gout">
                     <div class="quantite-produit">
                         <div class="image-fruit">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/fraise.png" alt="fraise">
-                            <div class="fruit-petit">FRAISE</div>
+                            <img src="<?php echo esc_url( $produits['image_1']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_1']['alt'] ); ?>">
+                            <div class="fruit-petit">
+                                <?php echo esc_html( $produits['nom_du_produit1'] );?> 
+                                <br> <?php  if($produits['nom_1_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit1b']);} ; ?>
+                            </div>
                         </div>
                         <input class="quantity" type="quantity" value="0">
                     </div>
                     <div class="quantite-produit">
                         <div class="image-fruit">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/pamplemousse.png" alt="pamplemousse">
-                            <div class="fruit-petit">PAMPLE<br>MOUSSE</div>
+                            <img src="<?php echo esc_url( $produits['image_2']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_2']['alt'] ); ?>">
+                            <div class="fruit-petit">
+                                <?php echo esc_html( $produits['nom_du_produit2'] );?> 
+                                <br> <?php  if($produits['nom_2_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit2b']);} ; ?>
+                            </div>
                         </div>
                         <input class="quantity" type="quantity" value="0">
                     </div>
                     <div class="quantite-produit">
                         <div class="image-fruit">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/framboise.png" alt="framboise">
-                            <div class="fruit-petit">FRAM<br>BOISE</div>
+                            <img src="<?php echo esc_url( $produits['image_3']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_3']['alt'] ); ?>">
+                            <div class="fruit-petit">
+                                <?php echo esc_html( $produits['nom_du_produit3'] );?> 
+                                <br> <?php  if($produits['nom_3_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit3b']);} ; ?>
+                            </div>
                         </div>
                         <input class="quantity" type="quantity" value="0">
                     </div>
                     <div class="quantite-produit">
                         <div class="image-fruit">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/images/citron.png" alt="citron">
-                            <div class="fruit-petit">citron</div>
+                            <img src="<?php echo esc_url( $produits['image_4']['url'] ); ?>" alt="<?php echo esc_attr( $produits['image_4']['alt'] ); ?>">
+                            <div class="fruit-petit">
+                                <?php echo esc_html( $produits['nom_du_produit4'] );?> 
+                                <br> <?php  if($produits['nom_4_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit4b']);} ; ?>
+                            </div>
                         </div>
                         <input class="quantity" type="quantity" value="0">
                     </div>
                 </div>
                 <hr class="white-hr">
                 <div class="command-form">
-                    <div class="colonne">
-                        <div class="column1">
-                            <h3 class="white-text">Vos informations</h3>
-                            <label for="nom">Nom</label>
-                            <input type="text" required>
-                            <label for="nom">Prénom</label>
-                            <input type="text" required>
-                            <label for="nom">Email</label>
-                            <input type="email" required>
-                        </div>
-                        <div class="column2">
-                            <h3 class="white-text">Livraison</h3>
-                            <label for="nom">Adresse de livraison</label>
-                            <input type="text" required>
-                            <label for="nom">Code postal</label>
-                            <input type="text" required>
-                            <label for="nom">Ville</label>
-                            <input type="text" required>
-                        </div>
-                    </div>
-                    <input type="submit" value="Commander" class="CTA">
+                <?php echo do_shortcode( '[contact-form-7 id="62de59e" title="Formulaire Commande"]' ); ?>
                 </div>
-            </form>    
+            </div>    
 
             <?php
     get_footer();

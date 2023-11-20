@@ -97,7 +97,6 @@ header {
 }
   
 .header-menu a {
-    margin-left: 60px;
     text-decoration: none;
     text-align: center;
     }
@@ -109,22 +108,33 @@ header {
 
 .header-menu li {
     list-style-type: none;
-    margin-left: 20px; /* Ajustez la marge en fonction de votre mise en page */
+    order: 1;
+    margin: 0 30px;
 }
 
-.header-menu li:last-child a {
+.header-menu li.admin-menu {
+    order: 2;
+    margin-right: 60px;
+}
+
+.header-menu li.commander {
     display: flex;
     background-color: var(--button-nav);
     color: #fff;
     width: 236px;
     height: 80px;
-    justify-content: center;
     align-items: center;
     font-weight: 700;
+    order: 3;
+    margin: 0;
+    justify-content: center;
 }
 
-.header-menu li:last-child a:hover {
+.header-menu li.commander:hover {
     background-color: var(--button-hover);
+}
+
+.header-menu li.commander a:hover {
     font-size: 1em; !important
 }
 
@@ -184,8 +194,6 @@ label {
     text-align: left;
     font-size: 1.2em;
     font-weight: 400;
-    margin-bottom: 13px;
-    margin-top: 22px;
 }
 
 input, textarea {
@@ -193,3 +201,96 @@ input, textarea {
     border-radius: 7px;
     border: none;
   }
+
+.wpcf7-text, .wpcf7-textarea {
+    margin-top: 13px;
+    margin-bottom: 22px;           
+}
+
+@media (max-width: 1200px) {
+
+    p {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2, h3 {
+        font-size: 1.5em;
+    }
+
+    .main-container {
+        max-width: 100%;
+    }
+
+    .header-menu a {
+        margin-left: 30px;
+    }
+
+    .header-menu li:last-child a {
+        width: 180px;
+    }
+   
+
+    .banniere-accueil {
+        padding: 70px 20px;
+    }
+
+    .CTA {
+        padding: 0px 15px;
+        height: 45px;
+        font-size: 0.8em;
+    }
+
+    .separateur {
+        height: 15px;
+    }
+
+    .full-width-image {
+        padding-top: 80px;
+    }
+}
+    
+
+@media (max-width: 900px) {
+
+    
+    p {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+
+    .main-container {
+        max-width: 100%;
+    }
+
+    .header-menu li:last-child a {
+        width: 100px;
+    }
+   
+
+    .banniere-accueil {
+        padding: 70px 20px;
+    }
+
+    .CTA {
+        padding: 0px 10px;
+    }
+
+    .separateur {
+        height: 15px;
+    }
+
+    .full-width-image {
+        padding-top: 60px;
+    }
+}

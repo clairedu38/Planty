@@ -38,7 +38,7 @@ h4 {
 .column-equipe {
     text-align: center;
     display: flex;
-    flex-direction: column; /* Afficher les colonnes */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 80px;
@@ -67,19 +67,19 @@ form {
     flex-direction: column;
     align-items: center;
     z-index: 0;
+    width: 383px;
+    text-align: left;
+    margin: auto;
 }
 
-.formulaire-contact {
+.forms {
     display: flex;
     width: 383px;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     margin: auto;
-}
-
-.section-formulaire-contact .full-width-image {
-    padding-top: 42px;
+    margin-bottom: 22px;
 }
 
 .CTA {
@@ -90,6 +90,12 @@ form {
 
 textarea {
     height: 237px;
+    position: relative;
+}
+
+span.wpcf7-form-control-wrap {
+    display: inline-block;
+    padding: 10px 0;
 }
 
 .feuillebaie {
@@ -98,4 +104,40 @@ textarea {
     top: 562px;
     left: 442px;
     z-index: 0;
+}
+
+.section-formulaire-contact .full-width-image {
+    padding-top: 42px;
+}
+
+@media (max-width: 1200px) {
+
+    .titre_rose {
+        margin-top: 40px ;
+    }
+    
+    h3 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .equipe {
+        gap: 80px;
+    }
+    
+    .column-equipe {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .equipe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 157px;
+        position: relative;
+    }
 }
