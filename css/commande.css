@@ -147,11 +147,6 @@ form {
     margin: auto;
 }
 
-@media (max-width: 1200px) {
-
-
-}
-
 @media (max-width: 900px) {
 
     .commande {
@@ -159,7 +154,10 @@ form {
     }
 
     .image-gout {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 0px;
+        width: 100%;
     }
 
     .commande-title {
@@ -168,14 +166,29 @@ form {
 
     .colonne {
         grid-template-columns: 1fr;
+        margin: auto;
     }
     
     .column1 {
         padding: 0 30px;
         border-right: 0px solid white;
+        width: 80%;
     }
     
     .column2 {
         padding: 20px 30px 0 30px;
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .image-gout {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        justify-content: center;
+        margin-bottom: 0px;
     }
 }

@@ -10,8 +10,8 @@
 
 .separator-rounded {
     background-color: var(--bg-color); 
-    height: 20px;
-    border-radius: 0 0 40% 40%;
+    height: 70px;
+    border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
     box-shadow:0 10px #e3d9d0;
 }
 
@@ -118,7 +118,7 @@ margin: 105px 0px 84px 0px;
     padding-top: 11px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
 
     .section_avis {
         padding: 0 30px;
@@ -140,8 +140,24 @@ margin: 105px 0px 84px 0px;
         width: 80%;
     }
 
+    .fruit {
+        font-size: 2.2em;
+    }
+
+    .image-box {
+        width: 300px;
+    }
+
+    .image-grid {
+        margin-bottom: 0px;
+    }
+    
     .section_avis h2 {
         margin: 50px 0px 40px 0px;
+    }
+
+    .avis_unique {
+        width: 450px;
     }
 
     .avis {
@@ -153,6 +169,22 @@ margin: 105px 0px 84px 0px;
 
     .avis_image img {
         padding-left: 20px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .banniere-accueil {
+        padding: 30px 20px;
+    }
+
+    .banniere-accueil img {
+        padding-top: 0;
+    }
+
+    .separator-rounded {
+        height: 20px;        
     }
 
     .gouts p {
@@ -167,12 +199,21 @@ margin: 105px 0px 84px 0px;
         gap: 0px;
     }
 
+    .image-box {
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
     .image-box img {
         width: 80%;
     }
 
     .fruit {
-        font-size: 2em;
+        font-size: 1.9em;
+    }
+
+    .avis_unique {
+        width: 300px;
     }
 
 }

@@ -180,8 +180,8 @@ footer {
 
 .separateur {
     background-color: var(--bg-color); 
-    height: 20px;
-    border-radius: 0 0 40% 40%;
+    height: 70px;
+    border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
 }
 
 .full-width-image {
@@ -255,8 +255,22 @@ input, textarea {
     
 
 @media (max-width: 900px) {
+    .main-container {
+        max-width: 100%;
+    }
 
-    
+    .header-menu a {
+        font-size: 0.8em;
+    }
+
+    .header-menu li {
+        padding: 0; 
+        margin: 0;
+    }    
+}
+
+@media (max-width: 750px) {
+
     p {
         font-size: 0.9em;
     }
@@ -285,10 +299,11 @@ input, textarea {
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-around;
         gap: 0;
+        align-content: space-between;
+        justify-content: space-around; 
     }
-
+ 
     header nav {
         width: 100%;
         padding: 0;
@@ -304,7 +319,8 @@ input, textarea {
         list-style-type: none;
         order: 1;
         margin: 0;
-        padding: 0;
+        padding: 0; 
+        align-items: center;
     }
     
     .header-menu li.admin-menu {
@@ -312,7 +328,7 @@ input, textarea {
         margin: 0px;
         padding: 0%;
         border-left: 1px solid var(--button-hover);
-        width: 30%;
+        width: 50%;
         text-align: center;
     }
     
@@ -337,4 +353,5 @@ input, textarea {
     .full-width-image {
         padding-top: 60px;
     }
+
 }

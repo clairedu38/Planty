@@ -1,5 +1,10 @@
 /* Première section */
 
+.banniere-accueil{
+    padding: 105px 360px 20px 360px;
+}
+
+
 .titre_rose {
     color: var(--title-pink);
     margin-top: 81px ;
@@ -112,8 +117,19 @@ span.wpcf7-form-control-wrap {
 
 @media (max-width: 1200px) {
 
+    .banniere-accueil{
+        padding: 30px 10px 20px 10px;
+    }
+
     .titre_rose {
         margin-top: 40px ;
+    }
+
+    .fleur {
+        height: 90px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
     }
     
     h3 {
@@ -128,13 +144,36 @@ span.wpcf7-form-control-wrap {
     .column-equipe {
         margin-bottom: 40px;
     }
-
+    
 }
 
 @media (max-width: 900px) {
 
+    .feuille2 {
+        height: 100px;
+        bottom: 0px;
+        left: 88%;
+    }
+
+    .feuillebaie {
+        height: 190px;
+        top: 60%;
+        left: 15%;
+    }
+
+}
+
+@media (max-width: 750px) {
+
     .equipe {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .feuille2 {
+        height: 100px;
+        bottom: 0px;
+        left: 75%;
     }
 
     h4 {
@@ -147,6 +186,12 @@ span.wpcf7-form-control-wrap {
 
     .forms {
         width: 280px;
+    }
+    
+    .feuillebaie {
+        height: 190px;
+        top: 65%;
+        left: -20%;
     }
 
 }
