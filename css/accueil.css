@@ -83,6 +83,14 @@
     text-transform: uppercase;
   }
 
+  .CTA {
+    display: inline-block;
+    height: 45px ;
+    margin: auto;
+  }
+
+
+
 /* Section avis */
 
 .section_avis h2 {

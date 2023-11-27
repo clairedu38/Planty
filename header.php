@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/style.css">
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/accueil.css">
+    <?php wp_head(); ?>
 </head>
 
 <body>

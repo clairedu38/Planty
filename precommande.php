@@ -1,19 +1,6 @@
 <?php
 // Template Name: Pre-commande
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planty</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/style.css">
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/commande.css">
-</head>
 
 <?php
 get_header();
@@ -34,7 +21,6 @@ $produits = get_field('galerie_produit');
                                 <br> <?php  if($produits['nom_1_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit1b']);} ; ?>
                             </div>
                         </div>
-                        <input class="quantity" type="quantity" value="0">
                     </div>
                     <div class="quantite-produit">
                         <div class="image-fruit">
@@ -44,7 +30,6 @@ $produits = get_field('galerie_produit');
                                 <br> <?php  if($produits['nom_2_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit2b']);} ; ?>
                             </div>
                         </div>
-                        <input class="quantity" type="quantity" value="0">
                     </div>
                     <div class="quantite-produit">
                         <div class="image-fruit">
@@ -54,7 +39,6 @@ $produits = get_field('galerie_produit');
                                 <br> <?php  if($produits['nom_3_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit3b']);} ; ?>
                             </div>
                         </div>
-                        <input class="quantity" type="quantity" value="0">
                     </div>
                     <div class="quantite-produit">
                         <div class="image-fruit">
@@ -64,13 +48,9 @@ $produits = get_field('galerie_produit');
                                 <br> <?php  if($produits['nom_4_sur_2_lignes'] == true) {echo esc_html( $produits['nom_du_produit4b']);} ; ?>
                             </div>
                         </div>
-                        <input class="quantity" type="quantity" value="0">
                     </div>
                 </div>
-                <hr class="white-hr">
-                <div class="command-form">
-                <?php echo do_shortcode( '[contact-form-7 id="62de59e" title="Formulaire Commande"]' ); ?>
-                </div>
+                <?php echo do_shortcode( '[contact-form-7 id="62de59e" title="Formulaire Commande"]' ); ?>                
             </div>    
 
             <?php

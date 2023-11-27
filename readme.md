@@ -1,2 +1,3 @@
-Réalisation du projet Planty
-Theme wordpress necessite l'installation du pluggin ACF
+# Projet 6 - Planty
+
+Necessite l'installation du pluggin ACF et de Contact Form 7
