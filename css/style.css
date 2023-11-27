@@ -1,5 +1,3 @@
-
-
 /* General */
 * {
     font-family: 'Syne', sans-serif;
@@ -66,7 +64,7 @@ ul {
     margin: 0;
 }
 
-/************** Header ********/
+/* HEADER */
 
 header {
     display: flex;
@@ -108,12 +106,12 @@ header {
 
 .header-menu li {
     list-style-type: none;
-    order: 1;
+    order: 1; /* permet d'inclure le bouton "admin" au milieu du menu */
     margin: 0 30px;
 }
 
 .header-menu li.admin-menu {
-    order: 2;
+    order: 2; /* permet d'inclure le bouton "admin" au milieu du menu */
     margin-right: 60px;
 }
 
@@ -125,7 +123,7 @@ header {
     height: 80px;
     align-items: center;
     font-weight: 700;
-    order: 3;
+    order: 3; /* permet de laisser le bouton "commander" à la fin du menu */
     margin: 0;
     justify-content: center;
 }
@@ -135,10 +133,11 @@ header {
 }
 
 .header-menu li.commander a:hover {
-    font-size: 1em; !important
+    font-size: 1em!important;
 }
 
     /* Footer */
+
 footer {
     display: flex;
     justify-content: center;
@@ -162,7 +161,6 @@ footer {
     position: relative;
 }
 
-
 .CTA {
     background-color: var(--button); /* Couleur de fond pour le bouton Commander */
     color: #fff; /* Couleur du texte pour le bouton Commander */
@@ -180,11 +178,11 @@ footer {
 
 .separateur {
     background-color: var(--bg-color); 
-    height: 70px;
+    height: 20px;
     border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
 }
 
-.full-width-image {
+.image-bas-page {
     width: 100%;
     display: block;
     padding-top: 115px;
@@ -207,6 +205,8 @@ input, textarea {
     margin-bottom: 22px;           
 }
 
+/* RESPONSIVE */
+/* petits écrans */
 @media (max-width: 1200px) {
 
     p {
@@ -229,11 +229,14 @@ input, textarea {
         margin-left: 30px;
     }
 
-    .header-menu li:last-child a {
+    .header-menu li.commander a:hover {
+        font-size: 1em!important;
+    }
+
+    .header-menu li.commander a {
         width: 180px;
     }
    
-
     .banniere-accueil {
         padding: 70px 20px;
     }
@@ -252,8 +255,8 @@ input, textarea {
         padding-top: 80px;
     }
 }
-    
 
+/* tablettes */
 @media (max-width: 900px) {
     .main-container {
         max-width: 100%;
@@ -263,12 +266,23 @@ input, textarea {
         font-size: 0.8em;
     }
 
+    .header-menu a:hover {
+        font-size: 0.7em;
+    }
+
     .header-menu li {
         padding: 0; 
         margin: 0;
-    }    
+    }  
+    .header-menu li.commander a {
+        font-size: 0.8em;
+    }
+    .header-menu li.commander a:hover {
+        font-size: 0.8em!important;
+    }
+    
 }
-
+/* mobile */
 @media (max-width: 750px) {
 
     p {
@@ -312,7 +326,6 @@ input, textarea {
     .header-menu a {
         margin: 0px;
         padding: 0;
-        text-align: center;
     }
               
     .header-menu li {
@@ -321,6 +334,8 @@ input, textarea {
         margin: 0;
         padding: 0; 
         align-items: center;
+        width: 50%;
+        text-align: center;
     }
     
     .header-menu li.admin-menu {
@@ -328,15 +343,15 @@ input, textarea {
         margin: 0px;
         padding: 0%;
         border-left: 1px solid var(--button-hover);
-        width: 50%;
+        width: calc(50% - 1px);
         text-align: center;
+    
     }
     
     .header-menu li.commander {
         width: 100%;
         height: 50px;
     }
-    
 
     .banniere-accueil {
         padding: 70px 20px;
@@ -350,7 +365,7 @@ input, textarea {
         height: 15px;
     }
 
-    .full-width-image {
+    .image-bas-page {
         padding-top: 60px;
     }
 

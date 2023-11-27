@@ -17,6 +17,10 @@
     left: 143px;
 }
 
+.separateur { 
+    height: 70px;
+}
+
 /* Deuxième section */
 
 h3 {
@@ -111,7 +115,7 @@ span.wpcf7-form-control-wrap {
     z-index: 0;
 }
 
-.section-formulaire-contact .full-width-image {
+.section-formulaire-contact .image-bas-page {
     padding-top: 42px;
 }
 
@@ -192,6 +196,10 @@ span.wpcf7-form-control-wrap {
         height: 190px;
         top: 65%;
         left: -20%;
+    }
+
+    .separateur {
+        height: 20px;
     }
 
 }

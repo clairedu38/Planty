@@ -2,20 +2,6 @@
 // Template Name: Accueil 
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planty</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/style.css">
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/css/accueil.css">
-</head>
-
 <?php
 get_header();
 $imageaccueil = get_field('image_de_la_banniere');
@@ -74,7 +60,7 @@ $avis3 = get_field('avis_3');
                         </div>
                     </div>
                 </div>
-                <a href="<?php echo esc_url( $CTAcommander['url_bouton_cta'] ); ?>"><button class="CTA"><?php echo esc_html( $CTAcommander['nom_du_bouton'] ); ?></button></a>
+                <a href="<?php echo esc_url( $CTAcommander["url_bouton_cta"]['url'] ); ?>"><div class="CTA"><?php echo esc_html( $CTAcommander['nom_du_bouton'] ); ?></div></a>
             </section>
         
             <div class="separateur"></div>
@@ -111,6 +97,6 @@ $avis3 = get_field('avis_3');
                     </div>
                 </div>
             </section>
-            <img src="<?php echo $imagecanettes['url']; ?>" alt="<?php echo $imagecanettes['alt']; ?>" class="full-width-image">
+            <img src="<?php echo $imagecanettes['url']; ?>" alt="<?php echo $imagecanettes['alt']; ?>" class="image-bas-page">
 <?php
     get_footer();

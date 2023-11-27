@@ -12,7 +12,8 @@
     background-color: var(--bg-color); 
     height: 70px;
     border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
-    box-shadow:0 10px #e3d9d0;
+    border-bottom: 5px solid #e3d9d0;
+    box-shadow:0 5px #e3d9d0;
 }
 
 /* Section Description planty */
