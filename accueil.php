@@ -3,7 +3,9 @@
 ?>
 
 <?php
+// Inclure l'en-tête de la page
 get_header();
+// Récupérer les champs ACF nécessaires
 $imageaccueil = get_field('image_de_la_banniere');
 $imagecanettes = get_field('image_de_bas_de_page');
 $produits = get_field('galerie_produit');
@@ -60,7 +62,7 @@ $avis3 = get_field('avis_3');
                         </div>
                     </div>
                 </div>
-                <a href="<?php echo esc_url( $CTAcommander["url_bouton_cta"]['url'] ); ?>"><div class="CTA"><?php echo esc_html( $CTAcommander['nom_du_bouton'] ); ?></div></a>
+                <div class="CTA"><a href="<?php echo esc_url( $CTAcommander["url_bouton_cta"]['url'] ); ?>"><?php echo esc_html( $CTAcommander['nom_du_bouton'] ); ?></a></div>
             </section>
         
             <div class="separateur"></div>

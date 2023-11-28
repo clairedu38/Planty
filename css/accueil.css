@@ -7,7 +7,7 @@
     padding-top: 70px;
 }
 
-
+/* Séparateur arrondi */
 .separator-rounded {
     background-color: var(--bg-color); 
     height: 70px;
@@ -84,11 +84,12 @@
   }
 
   .CTA {
+    height: 18px ;
     display: inline-block;
-    height: 45px ;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 56px;
   }
-
 
 
 /* Section avis */
@@ -196,8 +197,12 @@ margin: 105px 0px 84px 0px;
         height: 20px;        
     }
 
+    .description-planty p {
+        margin: 0 10px;
+    }
+
     .gouts p {
-        margin: 7px 0px 20px 0px;
+        margin: 7px 10px 20px 10px;
     }
 
     .image-grid {
